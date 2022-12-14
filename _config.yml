@@ -28,7 +28,7 @@ twitter_username: H3lkias288
 github_username: Helkias
 
 # Build settings
-theme: minima
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
 
