@@ -268,6 +268,7 @@ GEM
     unicode-display_width (1.8.0)
     verbal_expressions (0.1.5)
     wdm (0.1.1)
+    webrick (1.7.0)
 
 PLATFORMS
   x64-mingw-ucrt
@@ -283,6 +284,7 @@ DEPENDENCIES
   jemoji
   tzinfo-data
   wdm (~> 0.1.0)
+  webrick
 
 BUNDLED WITH
    2.3.26
