@@ -15,48 +15,111 @@
 # in the templates via {{ site.myvariable }}.
 
 
-email:
-twitter_username: username
-github_username: username
-search: true
-github: [metadata]
+email                    :
+twitter_username         : username
+github_username          : username
+github                   : [metadata]
 
-# Build and theme settings
-markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
-minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+#Build and theme settings
+markdown                 : kramdown
+highlighter              : rouge
+remote_theme             : mmistakes/minimal-mistakes
+minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 #Site settings
-locale: "en-US"
-title: "H3lkias | Cybersecurity"
-title_separator: "-"
-subtitle: "Version 1.0"
-name: "Cristóbal J.M"
-description: "DFIR - Malware Analysis - Interesting articles"
-url: "https://helkias.github.io/h3lkias/"
-baseurl: "/helkias.github.io/h3lkias"
-#repository: "Helkias/h3lkias"
-#teaser: /assets/images/loquesea
-logo: "/assets/images/logo.png"
-masthead_title: "My Custom Title"
-breadcrumbs: true  # disabled by default
+locale                   : "en-US"
+title                    : "H3lkias | Cybersecurity"
+title_separator          : "-"
+subtitle                 : #"Cybersecurity"
+name                     : "H3lkias"
+description              : "DFIR - Malware Analysis - Interesting articles"
+url                      : "https://helkias.github.io/h3lkias/"
+baseurl                  : "/helkias.github.io/h3lkias"
+#repository              : "Helkias/h3lkias"
+#teaser                  : /assets/images/loquesea
+logo                     : "/assets/images/logo.png"
+masthead_title           : "H3lkias"
+breadcrumbs              : true  # disabled by default
+search                   : true # true, false (default)
+search_provider          : #algolia #google  
+#algolia:
+#  application_id         : # 5172CBCMMM
+#  index_name             : # First
+#  search_only_api_key    : # baee73fdfe64987528e090e845b4a5d6
+#  powered_by             : # true (default), false
 
+# SEO Related - https://www.bing.com/webmasters/help/add-and-verify-site-12184f8b para verificar el sitio!
+google_site_verification : 
+bing_site_verification   :
+yandex_site_verification :
+naver_site_verification  :
 
+#Social sharing
+twitter:
+  username               : 
+facebook:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 : # Open Graph/Twitter default site image
 
+#For specifying social profiles
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
+  links                  : # An array of links to social media profiles
 
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+#Analytics
+analytics:
+  provider               : # false (default), "google", "google-universal", "custom"
+  google:
+    tracking_id          : # id
+    anonymize_ip         : # true, false (default)
+
+#Site Author
+author:
+  name                   : "Cristóbal Jiménez"
+  avatar                 : /assets/images/avatar.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio                    : "DFIR & Malware Analysis Adventures"
+  location               : "Spain"
+  links:
+  # https://fontawesome.com/v5/search
+      - label            : "Email"
+        icon             : "fas fa-fw fa-envelope-square"
+        url              : "mailto:cjimenezmamero@outlook.es"
+      - label            : "Twitter"
+        icon             : "fab fa-fw fa-twitter-square"
+        url              : "https://twitter.com/H3lkias288"
+      - label            : "GitHub"
+        icon             : "fab fa-fw fa-github"
+        url              : "https://github.com/Helkias"
+      - label            : "LinkedIn"
+        icon             : "fab fa-fw fa-linkedin"
+        url              : "https://www.linkedin.com/in/cristobal-jimenez-mamero/"
+
+#Footer
+footer:
+  links:
+    - label              : "Twitter"
+      icon               : "fab fa-fw fa-twitter-square"
+      url                : "https://twitter.com/H3lkias288"
+    - label              : "GitHub"
+      icon               : "fab fa-fw fa-github"
+      url                : "https://github.com/Helkias"
+    - label              : "LinkedIn"
+      icon               : "fab fa-fw fa-linkedin"
+      url                : "https://www.linkedin.com/in/cristobal-jimenez-mamero/"
+
 
 include:
+  - .htaccess
   - _pages
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
+exclude:
 #   - Gemfile
 #   - Gemfile.lock
 #   - node_modules
@@ -64,6 +127,20 @@ include:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+keep_files:
+  - .git
+  - .svn
+encoding                 : "utf-8"
+markdown_ext             : "markdown,mkdown,mkdn,mkd,md"
+
+
+# Outputting
+permalink                : /:categories/:title/
+paginate                 : 6 # amount of posts to show
+paginate_path            : /page:num/
+timezone                 : # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
 
 # Plugins (previously gems:)
 plugins:
@@ -74,35 +151,14 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
-author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
-  links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
 
-footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
 
 defaults:
   # _posts
@@ -114,9 +170,9 @@ defaults:
       author_profile: true
       read_time: true
       show_date: true
-      comments: true
+      comments: false
       share: true
-      related: true
+      related: false
   
   # _pages
   - scope:
@@ -126,9 +182,36 @@ defaults:
       layout: single
       author_profile: true
 
+  # _collections
+    # - scope:
+    #    path: ""
+    #    type: foo
+    #  values:
+    #    layout: single
+
+
+# Archives
+#  Type
+#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
+#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
+#  Path (examples)
+#  - Archive page should exist at path when using Liquid method or you can
+#    expect broken links (especially with breadcrumbs enabled)
+#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
+#  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path>/my-awesome-category/index.html ~> path: /
+
 category_archive:
   type: liquid
   path: /categories/
 tag_archive:
   type: liquid
   path: /tags/
+
+
+# HTML Compression
+# - https://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development # disable compression in dev environment

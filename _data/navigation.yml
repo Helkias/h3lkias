@@ -1,11 +1,15 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "Malware Analysis"
+    url: /categories/#malware-analysis
+  - title: "Tutorials"
+    url: /categories/#tutorials
+  - title: "Blueteam Blog"
+    url: /categories/#blueteam-blog
   - title: "About"
-    url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
+    url: /categories/about
+  - title: "All Categories"
+    url: /categories
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
